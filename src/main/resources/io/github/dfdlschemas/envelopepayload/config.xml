@@ -4,6 +4,8 @@
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/">
   <daf:tunables>
     <daf:suppressSchemaDefinitionWarnings>
+      <!-- revisit if PCAP is changed from version 1.4.0 to any newer version.
+      We may not need this suppression any longer -->
       deprecatedRelativeSchemaLocation
     </daf:suppressSchemaDefinitionWarnings>
   </daf:tunables>
