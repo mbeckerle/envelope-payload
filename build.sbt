@@ -13,8 +13,19 @@ libraryDependencies ++= Seq(
 )
 
 enablePlugins(DaffodilPlugin)
+
 daffodilPackageBinVersions := Seq(daffodilVersion.value)
-daffodilPackageBinInfos := Seq(
-  ("/io/github/dfdlschemas/envelopepayload/xsd/envelopePayload.dfdl.xsd", Some("message"), None)
-)
+
+daffodilPackageBinInfos := {
+  val configFile =
+    (Compile / resourceDirectory).value / "io" / "github" / "dfdlschemas" / "envelopepayload" / "config.xml"
+  Seq(
+    DaffodilBinInfo(
+      schema = "/io/github/dfdlschemas/envelopepayload/xsd/envelopePayload.dfdl.xsd",
+      root = Some("message"),
+      config = Some(configFile)
+    )
+  )
+}
+
 daffodilTdmlUsesPackageBin := true

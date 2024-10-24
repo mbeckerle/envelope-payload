@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<daf:dfdlConfig
+  xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/">
+  <daf:tunables>
+    <daf:suppressSchemaDefinitionWarnings>
+      deprecatedRelativeSchemaLocation
+    </daf:suppressSchemaDefinitionWarnings>
+  </daf:tunables>
+</daf:dfdlConfig>
